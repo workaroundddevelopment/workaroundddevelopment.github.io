@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Workaround Driven Development</title>
+
+    <meta name="description"
+          content="Workaround Driven Development — a methodology based on how software is actually developed.">
+
+    <meta name="author" content="Workaround Driven Development">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="eyebrow">A software development methodology</div>
+
+    <h1>Workaround<br>Driven<br>Development</h1>
+
+    <p class="subtitle">
+        A methodology based on how software is actually developed,
+        rather than how we pretend it is developed.
+    </p>
+</header>
+
+
+<main>
+
+    <section id="manifesto">
+
+        <h2>The Manifesto</h2>
+
+        <div class="manifesto">
+
+            <p>
+                We are uncovering better ways of developing software
+                by doing it and helping others do it.
+            </p>
+
+            <p>
+                Through this work we have come to value:
+            </p>
+
+            <p>
+                <strong>Workarounds over solutions.</strong><br>
+                Production over architecture.<br>
+                Deadlines over design.<br>
+                Tickets over understanding.<br>
+                Metrics over outcomes.
+            </p>
+
+            <p>
+                That is, while there is value in the things on the right,
+                <strong>we value the things on the left more.</strong>
+            </p>
+
+        </div>
+
+        <blockquote>
+            "It works."
+            <br>
+            <small>— The highest form of architectural validation</small>
+        </blockquote>
+
+    </section>
+
+
+    <section id="principles">
+
+        <h2>The Principles</h2>
+
+        <div class="principles">
+
+            <article class="principle">
+                <div class="number">01</div>
+                <h3>Make It Work</h3>
+                <p>
+                    The first implementation is not supposed to be correct.
+                    It is supposed to work.
+                </p>
+            </article>
+
+            <article class="principle">
+                <div class="number">02</div>
+                <h3>Don't Fix What Works</h3>
+                <p>
+                    Every working system is a legacy system.
+                    Touching it creates unnecessary risk.
+                </p>
+            </article>
+
+            <article class="principle">
+                <div class="number">03</div>
+                <h3>Move Complexity Somewhere Else</h3>
+                <p>
+                    Complexity cannot be eliminated.
+                    It can only be moved to another team,
+                    another service, or another quarter.
+                </p>
+            </article>
+
+            <article class="principle">
+                <div class="number">04</div>
+                <h3>Architecture Is a Future Problem</h3>
+                <p>
+                    If the system is not experiencing the problem today,
+                    designing for it today is premature optimization.
+                </p>
+            </article>
+
+            <article class="principle">
+                <div class="number">05</div>
+                <h3>Every Workaround Is Temporary</h3>
+                <p>
+                    Especially the ones that have been running
+                    successfully for seven years.
+                </p>
+            </article>
+
+            <article class="principle">
+                <div class="number">06</div>
+                <h3>Document It in a Ticket</h3>
+                <p>
+                    If there is a ticket, the workaround is now
+                    officially part of the architecture.
+                </p>
+            </article>
+
+            <article class="principle">
+                <div class="number">07</div>
+                <h3>Automate the Workaround</h3>
+                <p>
+                    Once a workaround has been performed three times,
+                    automate it. This transforms manual debt into
+                    infrastructure.
+                </p>
+            </article>
+
+            <article class="principle">
+                <div class="number">08</div>
+                <h3>Blame the Dependency</h3>
+                <p>
+                    Distributed systems exist primarily so that
+                    someone else can be responsible for the failure.
+                </p>
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <section id="definition">
+
+        <h2>What is a workaround?</h2>
+
+        <p>
+            A workaround is a solution that solves the immediate problem
+            without necessarily solving the underlying problem.
+        </p>
+
+        <div class="definition">
+            workaround(problem) {
+                return "something that works";
+            }
+        </div>
+
+        <p>
+            Unlike a bug fix, a workaround is optimized for
+            <strong>time-to-recovery</strong> rather than
+            <strong>long-term correctness</strong>.
+        </p>
+
+        <p>
+            This is not necessarily a bad thing.
+        </p>
+
+        <p>
+            In real software development, constraints are everywhere:
+            deadlines, organizational boundaries, legacy systems,
+            dependencies, budgets, incidents and, occasionally,
+            decisions made by people who no longer work here.
+        </p>
+
+    </section>
+
+
+    <section id="reality">
+
+        <h2>The Reality</h2>
+
+        <p>
+            Software engineering literature often describes workarounds
+            as deviations from the intended process.
+        </p>
+
+        <p>
+            In practice, workarounds can be rational responses to
+            organizational and technical constraints.
+        </p>
+
+        <p>
+            The interesting question is therefore not:
+        </p>
+
+        <blockquote>
+            "Why did the developer do this?"
+        </blockquote>
+
+        <p>
+            but:
+        </p>
+
+        <blockquote>
+            "What made this the most rational thing to do at the time?"
+        </blockquote>
+
+        <p>
+            And perhaps more importantly:
+        </p>
+
+        <blockquote>
+            "Why is the workaround still here five years later?"
+        </blockquote>
+
+    </section>
+
+
+    <section id="laws">
+
+        <h2>The Laws of WDD</h2>
+
+        <h3>Law #1 — The Temporary Solution Law</h3>
+
+        <p>
+            Every temporary solution has a non-zero probability of
+            becoming permanent.
+        </p>
+
+        <h3>Law #2 — The Dependency Law</h3>
+
+        <p>
+            The more services a system depends on, the more opportunities
+            it has to explain why it cannot work.
+        </p>
+
+        <h3>Law #3 — The Ownership Law</h3>
+
+        <p>
+            A problem without an owner becomes an integration problem.
+        </p>
+
+        <h3>Law #4 — The Deadline Corollary</h3>
+
+        <p>
+            The closer the deadline, the more reasonable the workaround becomes.
+        </p>
+
+        <h3>Law #5 — The Success Paradox</h3>
+
+        <p>
+            The better a workaround works, the less likely it is to be replaced.
+        </p>
+
+    </section>
+
+
+    <section id="research">
+
+        <h2>Research</h2>
+
+        <p>
+            WDD is satire, but the phenomenon behind it is real.
+        </p>
+
+        <p>
+            Research has examined the benefits and consequences of
+            workarounds in software development projects, including
+            situations where developers deliberately use workarounds
+            to deal with organizational and project constraints.
+        </p>
+
+        <p class="disclaimer">
+            Workaround Driven Development is an informal and satirical
+            concept. It is not an established software development
+            methodology, framework, certification or professional standard (yet).
+        </p>
+
+    </section>
+
+
+    <section id="join">
+
+        <h2>Welcome to Production</h2>
+
+        <p>
+            You don't need permission to practice WDD.
+        </p>
+
+        <p>
+            You are probably already doing it.
+        </p>
+
+        <blockquote>
+            Ship it.
+        </blockquote>
+
+    </section>
+
+</main>
+
+
+<footer>
+    <strong>Workaround Driven Development</strong><br>
+    Built with HTML, CSS and questionable architectural decisions.
+</footer>
+
+</body>
+</html>
